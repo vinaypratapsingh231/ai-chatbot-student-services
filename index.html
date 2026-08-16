@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Student Support Chatbot</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+    <div class="chat-container">
+
+        <div class="chat-header">
+            <h1>🤖 AI Student Support</h1>
+            <p>Ask me anything about student support services</p>
+        </div>
+
+        <div id="chat-box" class="chat-box">
+            <div class="bot-message">
+                Hello! 👋<br>
+                I am your AI Student Support Assistant.<br>
+                How can I help you today?
+            </div>
+        </div>
+        <div class="suggested-questions">
+    <p><b>💡 Suggested Questions:</b></p>
+
+    <button onclick="askQuestion('What are the library timings?')">
+        📚 Library Timings
+    </button>
+
+    <button onclick="askQuestion('How do I submit my assignment?')">
+        📝 Assignment
+    </button>
+
+    <button onclick="askQuestion('How can I check my attendance?')">
+        📊 Attendance
+    </button>
+
+    <button onclick="askQuestion('What is my timetable?')">
+        📅 Timetable
+    </button>
+
+    <button onclick="askQuestion('When are the exams?')">
+        📝 Examination
+    </button>
+
+    <button onclick="askQuestion('How can I contact student support?')">
+        ☎️ Student Support
+    </button>
+</div>
+
+        <div class="input-area">
+            <input
+                type="text"
+                id="user-input"
+                placeholder="Type your question..."
+                autocomplete="off"
+            >
+
+            <button onclick="sendMessage()">Send</button>
+        </div>
+
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+</html>
